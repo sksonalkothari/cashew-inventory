@@ -1,0 +1,1 @@
+ALTER TABLE husk_rejection_sales ENABLE ROW LEVEL SECURITY;

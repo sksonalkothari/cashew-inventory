@@ -1,0 +1,7 @@
+fastapi
+uvicorn
+httpx
+python-dotenv
+pydantic[email]
+PyJWT>=2.8.0
+tzdata

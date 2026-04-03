@@ -1,0 +1,20 @@
+@echo off
+set FRONTEND_DIR=%~dp0frontend
+set BACKEND_DIR=%~dp0backend
+set NODE_DIR=%~dp0node
+set NODE_EXE=%NODE_DIR%\node.exe
+set NPM_EXE=%NODE_DIR%\npm.cmd
+
+echo Starting Cashew Inventory Management App...
+
+:: Start Backend
+start cmd /k "cd /d %BACKEND_DIR% && call venv\Scripts\activate && uvicorn app.main:app --host 127.0.0.1 --port 8000"
+
+:: Start Frontend using local Node
+start cmd /k "cd /d %FRONTEND_DIR% && %NPM_EXE% run preview"
+
+:: Wait and launch browser
+timeout /t 5 >nul
+start http://localhost:5173
+
+exit

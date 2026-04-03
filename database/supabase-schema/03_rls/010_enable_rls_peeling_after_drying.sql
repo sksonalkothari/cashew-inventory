@@ -1,0 +1,1 @@
+ALTER TABLE peeling_after_drying ENABLE ROW LEVEL SECURITY;

@@ -1,0 +1,1 @@
+ALTER TABLE cashew_shell_sales ENABLE ROW LEVEL SECURITY;
